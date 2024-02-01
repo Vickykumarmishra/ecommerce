@@ -12,6 +12,7 @@ export default function Home() {
     { id: 3, name: 'Crispy Fries', image: 'fries.jpg', description: 'Crispy fries', price: 8 },
     { id: 4, name: 'Sweet Cakes', image: 'cake.jpg', description: 'Sweet cakes', price: 12 },
     { id: 5, name: 'Green Salad', image: 'green.jpg', description: 'Healthy green salad', price: 7 },
+   
   ];
 
   // Apply filter and sort to the products
@@ -51,7 +52,7 @@ export default function Home() {
         {filteredAndSortedProducts.map((product) => (
           <div key={product.id} className="card lg:w-97 md:w-1/2 sm:w-full bg-base-100 shadow-xl" style={{ float: 'left', border: "0.05rem solid #F28705", marginBottom: "1rem" }}>
             <figure className="px-10 pt-10">
-              <motion.img whileHover={{ scale: 1.1 }} transition={{ duration: 0.8 }} src={product.image} alt={product.name} className="rounded-xl" />
+              <motion.img whileHover={{ scale: 1.1 }} transition={{ duration: 0.8 }} src={product.image} alt={product.name} className="rounded-xl img-fluid" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title">{product.name}</h2>
